@@ -1,0 +1,15 @@
+{
+	"manifest_version": 3,
+	"name": "Ask Company AI",
+	"version": "0.1.0",
+	"description": "Highlight text and ask the company AI for policy clarification.",
+	"permissions": ["contextMenus", "notifications", "activeTab", "storage"],
+	"host_permissions": ["http://localhost:8000/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_title": "Ask Company AI"
+	},
+	"options_page": "options.html"
+} 

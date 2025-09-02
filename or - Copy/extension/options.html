@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ask Company AI - Options</title>
+		<style>
+			body { font-family: system-ui, sans-serif; padding: 16px; }
+			label { display: block; margin-top: 12px; }
+			input { width: 100%; padding: 8px; }
+			button { margin-top: 12px; }
+		</style>
+	</head>
+	<body>
+		<h1>Ask Company AI - Options</h1>
+		<label>RAG API URL
+			<input id="ragUrl" placeholder="http://localhost:8000/query" />
+		</label>
+		<label>Default Department (optional)
+			<input id="dept" placeholder="HR / IT / Finance" />
+		</label>
+		<button id="save">Save</button>
+		<script>
+			const RAG_URL_KEY = 'rag_url';
+			const DEPT_KEY = 'department';
+			document.addEventListener('DOMContentLoaded', () => {
+				chrome.storage.sync.get([RAG_URL_KEY, DEPT_KEY], (result) => {
+					document.getElementById('ragUrl').value = result[RAG_URL_KEY] || 'http://localhost:8000/query';
+					document.getElementById('dept').value = result[DEPT_KEY] || '';
+				});
+				
+				document.getElementById('save').addEventListener('click', () => {
+					const ragUrl = document.getElementById('ragUrl').value.trim();
+					const dept = document.getElementById('dept').value.trim();
+					chrome.storage.sync.set({ [RAG_URL_KEY]: ragUrl, [DEPT_KEY]: dept }, () => {
+						alert('Saved');
+					});
+				});
+			});
+		</script>
+	</body>
+</html> 

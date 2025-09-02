@@ -1,0 +1,28 @@
+{
+  "name": "mf-it",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "ng serve --port 5175",
+    "build": "ng build"
+  },
+  "dependencies": {
+    "@angular/animations": "^17.3.7",
+    "@angular/common": "^17.3.7",
+    "@angular/compiler": "^17.3.7",
+    "@angular/core": "^17.3.7",
+    "@angular/forms": "^17.3.7",
+    "@angular/platform-browser": "^17.3.7",
+    "@angular/platform-browser-dynamic": "^17.3.7",
+    "@angular/router": "^17.3.7",
+    "rxjs": "^7.8.1",
+    "tslib": "^2.6.3",
+    "zone.js": "~0.14.7"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.7",
+    "@angular/cli": "^17.3.7",
+    "@angular/compiler-cli": "^17.3.7",
+    "typescript": "~5.3.3"
+  }
+} 

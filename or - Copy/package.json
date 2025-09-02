@@ -1,0 +1,18 @@
+{
+  "name": "simple-microfrontend-demo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "host",
+    "mf-hr", 
+    "mf-it",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n host,hr,it,api \"npm run -w host dev\" \"npm run -w mf-hr dev\" \"npm run -w mf-it dev\" \"npm run -w backend dev\"",
+    "build": "npm run -w host build && npm run -w mf-hr build && npm run -w mf-it build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
