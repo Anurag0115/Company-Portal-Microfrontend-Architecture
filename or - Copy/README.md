@@ -48,16 +48,6 @@ A comprehensive microfrontend demonstration platform with role-based authenticat
    - **Finance App:** http://localhost:3003
    - **Backend API:** http://localhost:5000
 
-## 🔐 Authentication
-
-### Demo Credentials
-
-| Role | Username | Password | Access |
-|------|----------|----------|---------|
-| **Admin** | `admin` | `admin123` | View all data, send change requests |
-| **HR** | `hr` | `hr123` | Full HR department access |
-| **IT** | `it` | `it123` | Full IT department access |
-| **Finance** | `finance` | `finance123` | Full Finance department access |
 
 ### Role-Based Access Control
 
